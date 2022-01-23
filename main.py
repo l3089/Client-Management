@@ -20,5 +20,5 @@ def add():
     return render_template('add-client.html')
 
     
-#if __name__ == '__main__':
-#   app.run()
+if __name__ == '__main__':
+   app.run()
