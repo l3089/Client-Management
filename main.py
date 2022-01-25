@@ -2,6 +2,10 @@ from flask import Flask, request, make_response, redirect, render_template
 
 app = Flask(__name__)
 
+#When a route is not found we modify the default 404 error
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('404.html', error=error)
 
 @app.route('/')
 def index():
@@ -19,6 +23,9 @@ def hello():
 def add():
     return render_template('add-client.html')
 
+@app.route('/test')
+def test():
+    return render_template('bstemplate.html')
     
 if __name__ == '__main__':
    app.run()

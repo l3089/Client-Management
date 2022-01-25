@@ -3,3 +3,6 @@ myenv
 
 #Ignore bootstrap files
 static/bootstrap-5.1.3-dist
+
+#Ingore all static archives
+static
